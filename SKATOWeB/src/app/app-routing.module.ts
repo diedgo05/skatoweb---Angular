@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormularioComponent } from './formulario/formulario.component';
+import { HomePComponent } from './home/home-p/home-p.component';
 
 const routes: Routes = [
   {
-    path: '', component:FormularioComponent
+    path: 'add', component:FormularioComponent
+  },
+  {
+    path: '', component:HomePComponent
   }
 ];
 

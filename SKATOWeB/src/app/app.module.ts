@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormularioModule } from './formulario/formulario.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormularioModule } from './formulario/formulario.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormularioModule
+    FormularioModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
