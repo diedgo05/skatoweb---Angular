@@ -1,16 +1,36 @@
 <section class="form-register">
-    <span>NOMBRE DE LA GUÍA</span>
-  <input class="controls" type="text" name="guía" placeholder="type here" id="guia" />
+  <form (ngSubmit)="onSubmit()">
+  <span>NOMBRE DE LA GUÍA</span>
+  <input
+    class="controls"
+    type="text"
+    name="guía"
+    placeholder="type here"
+    id="guia"
+    [(ngModel)]="title"
+  />
   <span>PASOS</span>
-  <textarea class="controls" name="pasos" id="pasos" placeholder="type here |"></textarea>
-  <!-- <input class="controls" type="text" name="pasos" placeholder="type here |" id="pasos" /> -->
+  <textarea
+    class="controls"
+    name="pasos"
+    id="pasos"
+    placeholder="type here |"
+    [(ngModel)]="description"
+  ></textarea>
   <span>TRUCO</span>
-  <select class="controls" name="truco" id="truco">
+
+  <select 
+  class="controls" 
+  name="truco" 
+  id="truco"
+  [(ngModel)]="idTrick"
+  (click)="onGetTrucos()"
+  >
     <option value="">-</option>
-    <option value="">Street</option>
-    <option value="">Park</option>
-   </select>
-   <div class="button">
-    <button>AGREGAR</button>
-</div>
+    <option *ngFor="let truco of trucos" [value]="truco.id">{{ truco.title }}</option>
+  </select>
+  <div class="button">
+    <button type="submit">AGREGAR</button>
+  </div>
+</form>
 </section>
