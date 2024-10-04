@@ -1,29 +1,67 @@
+
 <section class="form-register">
-    <span>NOMBRE DEL TRUCO</span>
-  <input class="controls" type="text" name="TRUCO" placeholder="TRUCO" id="truco" />
+  <form (ngSubmit)="onSubmit()">
+  <span>NOMBRE DEL TRUCO</span>
+  <input
+    class="controls"
+    type="text"
+    name="TRUCO"
+    placeholder="TRUCO"
+    id="truco"
+    required
+    [(ngModel)]="title"
+  />
   <span>DESCRIPCIÓN</span>
-  <input class="controls" type="text" name="DESCRIPCIÓN" placeholder="DESCRIPCIÓN" id="descripcion" />
+  <input
+    class="controls"
+    type="text"
+    name="DESCRIPCIÓN"
+    placeholder="DESCRIPCIÓN"
+    id="descripcion"
+    required
+    [(ngModel)]="description"
+  />
   <span>NIVEL REQUERIDO</span>
-   <select class="controls" name="NIVEL REQUERIDO" id="level">
+  <select
+    class="controls"
+    name="NIVEL REQUERIDO"
+    id="level"
+    required
+    [(ngModel)]="idLevelTrick"
+  >
     <option value="">-</option>
-    <option value="">Posser</option>
-    <option value="">Medio</option>
-    <option value="">Pro</option>
-   </select>
+    <option *ngFor="let level of levels" [value]="level.id">
+      {{ level.name }}
+    </option>
+  </select>
   <span>DIFICULTAD</span>
-  <select class="controls" name="DIFICULTAD" id="dificultad">
+  <select
+    class="controls"
+    name="DIFICULTAD"
+    id="dificultad"
+    required
+    [(ngModel)]="idDifficulty"
+  >
     <option value="">-</option>
-    <option value="">Facil</option>
-    <option value="">Medio</option>
-    <option value="">KABROWN</option>
-   </select>
+    <option *ngFor="let difficulty of difficulties" [value]="difficulty.id">
+      {{ difficulty.name }}
+    </option>
+  </select>
   <span>CATEGORÍA</span>
-  <select class="controls" name="CATEGORÍA" id="categoria">
-    <option value="">-</option>
-    <option value="">Street</option>
-    <option value="">Park</option>
-   </select>
-   <div class="button">
-    <button>AGREGAR</button>
-</div>
+  <select
+    class="controls"
+    name="CATEGORÍA"
+    id="categoria"
+    required
+    [(ngModel)]="idCategory"
+  >
+    <option>-</option>
+    <option *ngFor="let category of categories" [value]="category.id">
+      {{ category.name }}
+    </option>
+  </select>
+  <div class="button">
+    <button type="submit">AGREGAR</button>
+  </div>
+</form>
 </section>

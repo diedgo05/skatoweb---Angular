@@ -1,17 +1,8 @@
-<!-- <div class="container">
-    <div class="title">
-        <h2>TITULO</h2>
-    </div>
-    <div class="subtitle">
-        <h4>nombre deltruko</h4>
-    </div>
-</div> -->
-
-<section class="guide">
-  <h2>TÍTULO DE LA GUÍA</h2>
-  <h3>NOMBRE DEL TRUCO</h3>
+<section class="guide" *ngFor="let guia of guias">
+  <h2>{{ guia.title }}</h2>
+  <h3>{{ getTrickTitle(guia.idTrick) }}</h3>
   <div class="box">
-    <textarea placeholder="PASOS"></textarea>
+    <textarea placeholder="PASOS" readonly>{{ guia.description }}</textarea>
     <div class="image">
       <p>IMAGEN RELACIONADA AL TRUCO</p>
     </div>
@@ -20,18 +11,11 @@
   <div class="info">
     <div class="level">
       <span>NIVEL REQUERIDO</span>
-      <input type="text" placeholder="NIVEL REQUERIDO" />
+      <input type="text" placeholder="NIVEL REQUERIDO" readonly [value]="getLevelName(guia.idTrick)"/> 
     </div>
     <div class="category">
       <span>CATEGORÍA</span>
-      <input type="text" placeholder="CATEGORÍA" />
+      <input type="text" placeholder="CATEGORÍA" readonly [value]="getCategoryName(guia.idTrick)"/>
     </div>
   </div>
 </section>
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
-  rel="stylesheet"
-/>
