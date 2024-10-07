@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormularioModule } from './formulario/formulario.module';
 import { HomeModule } from './home/home.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
+import { PerfilModule } from './perfil/perfil.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import {  HttpClientModule } from '@angular/common/http';
     HomeModule,
     FormularioModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PerfilModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
