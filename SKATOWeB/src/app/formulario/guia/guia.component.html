@@ -29,6 +29,9 @@
     <option value="">-</option>
     <option *ngFor="let truco of trucos" [value]="truco.id">{{ truco.title }}</option>
   </select>
+  <input type="date"
+  class="controls"
+  [(ngModel)]="dateCreate">
   <div class="button">
     <button type="submit">AGREGAR</button>
   </div>

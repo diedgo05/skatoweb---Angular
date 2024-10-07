@@ -1,0 +1,12 @@
+<div class="delete">
+    <div *ngIf="guia" class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full relative">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Delete Trick</h2>
+            <p class="text-gray-600 mb-6">Are you sure you want to delete "{{ guia.title }}"?</p> 
+            <div class="buttons">
+                <button (click)="onClose()">Cancel</button>
+                <button (click)="onDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

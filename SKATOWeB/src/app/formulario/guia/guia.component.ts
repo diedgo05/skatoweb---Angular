@@ -20,18 +20,19 @@ export class GuiaComponent {
 
   trucos: TrucoModel[] = [];
 
-
     id: number = 0;
     title: string = '';
     description: string = '';
     idUser: number = 1;
     idTrick: number = 0;
+  dateCreate: Date = new Date;
 
   onSubmit () {
     const newGuide: GuiaModel = {
       id: this.id,
       title: this.title,
       description: this.description,
+      dateCreate: this.dateCreate,
       idUser: this.idUser,
       idTrick: this.idTrick
     }
@@ -64,6 +65,7 @@ export class GuiaComponent {
     this.id = 0;
     this.title = '';
     this.description = '';
+    this.dateCreate = new Date;
     this.idTrick = 0;
   }
 }

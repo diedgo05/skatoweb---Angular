@@ -1,0 +1,136 @@
+.container {
+    background-color: #C7CED0;
+    max-width: 900px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #003366;
+}
+
+.name{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.add, .delete {
+    cursor: pointer;
+    margin-left: 15px;
+}
+.add:hover{
+    background: #C7CED0;
+}
+.modal {
+    width: 100%;
+    max-width: 600px;
+    background-color: #d3d8db;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  
+  .form-register {
+    background-color: #b1ababc2;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50rem;
+    max-width: 90%;
+  }
+  
+  .form-register span {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .controls {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #7e57c2;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .controls:focus {
+    outline: none;
+    border-color: #5e35b1;
+  }
+  
+  .form-register input[type="text"],
+  .form-register select {
+    flex: 1 1 45%; 
+  }
+  
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .button button {
+    background-color: #1f3d5b; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button button:hover {
+    background-color: #142b43;
+  }
+  
+  .add svg,
+  .delete svg {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .add svg:hover,
+  .delete svg:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Fondo oscuro para el modal */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  .contorn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+  }
+  

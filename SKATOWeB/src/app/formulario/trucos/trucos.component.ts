@@ -1,13 +1,15 @@
   import { Component } from '@angular/core';
   import { TrucoModel } from './truco-model';
   import { TrucosService } from './trucos.service';
-
+  
   @Component({
     selector: 'app-trucos',
     templateUrl: './trucos.component.html',
     styleUrls: ['./trucos.component.css'] 
    })
   export class TrucosComponent {
+    trucos: TrucoModel[] = [];
+
 
     constructor(private trickService: TrucosService) {}
 
@@ -69,8 +71,10 @@
         this.idCategory = 0;
         this.idDifficulty = 0;
         this.idLevelTrick = 0;
-        this.idUser = 0;
+        this.idUser = 1;
       }
+
+
     }
 
 
