@@ -8,6 +8,8 @@ import { PerfilGComponent } from './perfil-g/perfil-g.component';
 import { ModalGComponent } from './modal-g/modal-g.component';
 import { ModalDeleteGComponent } from './modal-delete-g/modal-delete-g.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterLoginComponent } from './register-login/register-login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,11 +20,13 @@ import { FormsModule } from '@angular/forms';
     ModalDeleteComponent,
     PerfilGComponent,
     ModalGComponent,
-    ModalDeleteGComponent
+    ModalDeleteGComponent,
+    RegisterLoginComponent,
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PerfilModule { }

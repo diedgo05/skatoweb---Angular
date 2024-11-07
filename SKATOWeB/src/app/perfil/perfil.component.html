@@ -1,5 +1,9 @@
-<h3>TRUCOS</h3>
-<app-perfil-p></app-perfil-p>
-<h3>GUÍAS</h3>
-<app-perfil-g></app-perfil-g>
-<app-modal></app-modal>
+<div *ngIf="isTokenValid">
+  <h3>TRUCOS</h3>
+  <app-perfil-p></app-perfil-p>
+
+  <h3>GUÍAS</h3>
+  <app-perfil-g></app-perfil-g>
+
+  <app-modal></app-modal>
+</div>

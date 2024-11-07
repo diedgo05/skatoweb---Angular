@@ -1,1 +1,7 @@
-<app-vista></app-vista>
+<div *ngIf="isTokenValid; else noAccess">
+  <app-vista></app-vista> <!-- Aquí se muestra el componente 'vista' si el token es válido -->
+</div>
+
+<ng-template #noAccess>
+  <p>No tienes acceso a esta página. Inicia sesión para continuar.</p>
+</ng-template>

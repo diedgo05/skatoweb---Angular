@@ -7,14 +7,12 @@ import { FormularioModule } from './formulario/formulario.module';
 import { HomeModule } from './home/home.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
-import { PerfilModule } from './perfil/perfil.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { PerfilModule } from './perfil/perfil.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     PerfilModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

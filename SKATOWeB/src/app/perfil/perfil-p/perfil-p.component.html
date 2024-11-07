@@ -1,3 +1,4 @@
+<div *ngIf="isTokenValid">
 <div class="container" *ngFor="let truco of trucos">
   <div class="box">
     <h3 class="name">{{ truco.title }}</h3>
@@ -48,6 +49,7 @@
       </svg>
     </div>
   </div>
+</div>
 </div>
 
 <app-modal [isOpen]="isModalOpen" (close)="closeModal()">
@@ -115,3 +117,4 @@
   (close)="closeDeleteModal()"
 >
 </app-modal-delete>
+

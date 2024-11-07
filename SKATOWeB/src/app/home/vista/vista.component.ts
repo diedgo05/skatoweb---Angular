@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; 
 import { GuiaModel } from '../../formulario/guia/guia-model';
 import { TrucosService } from '../../formulario/trucos/trucos.service'; 
 import { GuiaService } from '../../formulario/guia/guia.service'; 
@@ -26,11 +27,25 @@ export class VistaComponent implements OnInit {
     { id: 3, name: 'vert' },
     { id: 4, name: 'freestyle' }
   ];
-  constructor(private guideService: GuiaService, private trucoService: TrucosService) {}
+
+  isTokenValid: boolean = false; 
+
+  constructor(
+    private guideService: GuiaService, 
+    private trucoService: TrucosService, 
+    private router: Router 
+  ) {}
 
   ngOnInit(): void {
-    this.getGuides();
-    this.getTricks();
+    const authToken = localStorage.getItem('authToken'); 
+    if (authToken) {
+      this.isTokenValid = true; 
+      this.getGuides(); 
+      this.getTricks(); 
+    } else {
+      this.isTokenValid = false;
+      this.router.navigate(['/login']); 
+    }
   }
 
   getGuides(): void {

@@ -1,3 +1,4 @@
+<div *ngIf="isTokenValid">
 <div class="container" *ngFor="let guia of guias">
   <div class="box">
     <h3 class="name">{{ guia.title }}</h3>
@@ -49,6 +50,7 @@
     </div>
   </div>
 </div>
+</div>
 
 <app-modal [isOpen]="isModalOpen" (close)="closeModal()">
   <div class="contorn">
@@ -77,7 +79,7 @@
           <option value="">-</option>
           <option *ngFor="let truco of trucos" [value]="truco.id">{{truco.title}}</option>
         </select>
-        <input type="date" class="controls" 
+        <input type="date" class="controls" name="date"
         [(ngModel)]="selectedGuia.dateCreate"
         />
         <div class="button">

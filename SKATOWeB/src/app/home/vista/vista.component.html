@@ -1,21 +1,23 @@
-<section class="guide" *ngFor="let guia of guias">
-  <h2>{{ guia.title }}</h2>
-  <h3>{{ getTrickTitle(guia.idTrick) }}</h3>
-  <div class="box">
-    <textarea placeholder="PASOS" readonly>{{ guia.description }}</textarea>
-    <div class="image">
-      <p>IMAGEN RELACIONADA AL TRUCO</p>
+<div *ngIf="isTokenValid">
+  <section class="guide" *ngFor="let guia of guias">
+    <h2>{{ guia.title }}</h2>
+    <h3>{{ getTrickTitle(guia.idTrick) }}</h3>
+    <div class="box">
+      <textarea placeholder="PASOS" readonly>{{ guia.description }}</textarea>
+      <div class="image">
+        <p>IMAGEN RELACIONADA AL TRUCO</p>
+      </div>
     </div>
-  </div>
 
-  <div class="info">
-    <div class="level">
-      <span>NIVEL REQUERIDO</span>
-      <input type="text" placeholder="NIVEL REQUERIDO" readonly [value]="getLevelName(guia.idTrick)"/> 
+    <div class="info">
+      <div class="level">
+        <span>NIVEL REQUERIDO</span>
+        <input type="text" placeholder="NIVEL REQUERIDO" readonly [value]="getLevelName(guia.idTrick)"/>
+      </div>
+      <div class="category">
+        <span>CATEGORÍA</span>
+        <input type="text" placeholder="CATEGORÍA" readonly [value]="getCategoryName(guia.idTrick)"/>
+      </div>
     </div>
-    <div class="category">
-      <span>CATEGORÍA</span>
-      <input type="text" placeholder="CATEGORÍA" readonly [value]="getCategoryName(guia.idTrick)"/>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
