@@ -6,3 +6,4 @@ export interface GuiaModel {
     idUser: number;
     idTrick: number;
 }
+
